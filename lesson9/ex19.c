@@ -164,3 +164,16 @@ int process_input(Map *game)
 	}
 	return 1;
 }
+
+int main (int argc, char *argv[]){
+	srand(time(NULL));
+	Map *game = NEW(Map, "The Hall of the Minotaur.");
+	
+	printf("You enter the ");
+
+	game->location->_(describe)(game->location);
+
+	while(process_input(game)){
+	}
+	return 0;
+}
